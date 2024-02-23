@@ -5,7 +5,7 @@ import {signinRouter} from './admin/routes/signin';
 import {json, urlencoded} from 'body-parser';
 import {adminStreamRouter} from './admin/routes/stream';
 import cors from 'cors';
-
+import { meetRoutes } from "./MeetRoutes";
 const app = express();
 app.set('trust proxy', true);
 app.use(json());
@@ -26,6 +26,7 @@ app.use(
 app.use(signinRouter);
 app.use(signoutRouter);
 app.use(adminStreamRouter);
+app.use(meetRoutes)
 
 app.get('/health', (req, res) => {
   res.sendStatus(200);

@@ -72,4 +72,5 @@ router.get('/:shopId/meets', async (req: Request<{ shopId: string }, any, any>, 
   }
 });
 
-export default router;
+// export default router;
+export {router as meetRoutes};
