@@ -15,6 +15,7 @@ const meetSchema = new Schema<IMeet>({
   meetId: {
     type: String,
     required: true
+    // we will pass this id on live streaming routes 
   },
   customers: {
     type: [String], // Assuming customers are represented by their IDs
